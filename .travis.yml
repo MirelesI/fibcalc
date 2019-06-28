@@ -22,6 +22,7 @@ after_success:
   - docker push mireli/multi-server
   - docker push mireli/multi-worker
 
+  # add deploy for aws
   deploy:
     #using aws beanstalk
     provider: elasticbeanstalk
