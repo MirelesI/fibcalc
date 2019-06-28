@@ -22,24 +22,4 @@ after_success:
   - docker push mireli/multi-server
   - docker push mireli/multi-worker
 
-  # add deploy for aws
-  deploy:
-    #using aws beanstalk
-    provider: elasticbeanstalk
-    # region we are in dor aws
-    region: us-east-1
-    #name of our application on aws
-    app: fibcalc
-    # environment created by beanstalk
-    env: Fibcalc-env
-    # s3 in aws bucket for our region
-    bucket-name: elasticbeanstalk-us-east-1-973422094481
-    bucker-path: docker-multi
-    on:
-      branch: master
-    #stored key and secret key in travis
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key:
-      secure: $AWS_SECRET_KEY
-
 
