@@ -29,7 +29,7 @@ after_success:
     app: "fibcalc"
     env: "Fibcalc-env"
     bucket-name: "elasticbeanstalk-us-east-1-973422094481"
-    bucker-path: "docker-multi"
+    bucker-path: "fibcalc"
     on:
       branch: master
     access_key_id: $AWS_ACCESS_KEY
